@@ -73,9 +73,7 @@ input, select, textarea {
 }
 
 /* Login */
-/* body{
-	text-align: center;
-} */
+
 #loginform{
 	display: block;
 	/* align-content: center; */
