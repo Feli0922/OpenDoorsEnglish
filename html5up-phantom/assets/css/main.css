@@ -72,29 +72,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-/* Login */
-
-#loginform{
-	display: block;
-	/* align-content: center; */
-}
-
-.login{
-	width: 40%;
-	font-size: 20px;
-	padding: 30px 40px;
-	border: solid;
-	border-color: #c9c9c9;
-	border-radius: 4px;
-	border-width: 4px;
-}
-
-.logintitle h1{
-	padding-bottom: 20px;
-	font-size: 30px;
-	text-align: center;
-}
-
 /* Basic */
 
 	@-ms-viewport {
@@ -2595,7 +2572,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		position: relative;
+		postiion: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
