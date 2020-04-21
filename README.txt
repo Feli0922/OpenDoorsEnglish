@@ -1,0 +1,1 @@
+This project uses Sass. Don't edit the main.css file directly, instead edit the .scss files. 
