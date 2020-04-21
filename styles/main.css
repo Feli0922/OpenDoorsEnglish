@@ -1,5 +1,5 @@
-/* base */
-/* Colors */
+/* Base */
+/* Palette */
 body {
   color: #585858;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -8,8 +8,8 @@ body {
   line-height: 1.75;
 }
 
-/* layout */
-/* components */
+/* Layout */
+/* Components */
 #loginform {
   display: block;
   -ms-flex-line-pack: center;
