@@ -1,10 +1,6 @@
-#loginform{
-    display: block;
-    align-content: center;
-}
-
 .login{
-    width: 40%;
+    margin: auto;
+    width: 25%;
     font-size: 20px;
     padding: 30px 40px;
     border: solid;
@@ -17,4 +13,17 @@
     padding-bottom: 20px;
     font-size: 30px;
     text-align: center;
+}
+
+.label_input{
+    padding-top: 20px;
+    text-align: right;
+    width: 85%;
+}
+
+input{
+    padding: 5px 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: $border;
 }
