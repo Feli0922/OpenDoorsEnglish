@@ -1,0 +1,13 @@
+/* Class page styling */
+.class_content{
+    display: flex;
+}
+
+.class_sidebar{
+    flex-grow: 1;
+    border: $border;
+}
+
+.display_content{
+    flex-grow: 3;
+}

@@ -39,14 +39,22 @@
                     </div>
                     
 					<form id="login_form" method="post" name="studentlogin">
-                        <label> User Name:</label>
-                        <input type="text" name="studentlogin" id="studentlogin" required/>
-                        <label> Email: </label>
-                        <input type="email" name="email" id="email" required/>
-                        <label> Password: </label>
-                        <input type="password" name="password" id="password"/>
-                        <input type="button" value="login" id="submit" onclick="validate()"/>
-                    </form>
+						<div class = "label_input" >
+                        	<label> User Name:</label>
+                        	<input type="text" name="studentlogin" id="studentlogin" required/>
+						</div>
+						<div class = "label_input" >
+							<label> Email: </label>
+                        	<input type="email" name="email" id="email" required/>
+						</div>
+						<div class = "label_input" >
+							<label> Password: </label>
+                        	<input type="password" name="password" id="password"/>
+						</div>
+						<div class="login_btn">
+							<input type="button" value="Login" id="submit" onclick="validate()"/>
+						</div>	
+					</form>
                 </div>
     
 			</div>

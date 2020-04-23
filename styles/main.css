@@ -10,14 +10,21 @@ body {
 
 /* Layout */
 /* Components */
-#loginform {
-  display: block;
-  -ms-flex-line-pack: center;
-      align-content: center;
+/* login button */
+.login_btn {
+  text-align: right;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
+.login_btn input {
+  padding: 6px 30px;
+  font-variant: small-caps;
 }
 
 .login {
-  width: 40%;
+  margin: auto;
+  width: 25%;
   font-size: 20px;
   padding: 30px 40px;
   border: solid;
@@ -30,5 +37,38 @@ body {
   padding-bottom: 20px;
   font-size: 30px;
   text-align: center;
+}
+
+.label_input {
+  padding-top: 20px;
+  text-align: right;
+  width: 85%;
+}
+
+input {
+  padding: 5px 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: #c9c9c9;
+}
+
+/* Class page styling */
+.class_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.class_sidebar {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: #c9c9c9;
+}
+
+.display_content {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
 }
 /*# sourceMappingURL=main.css.map */
