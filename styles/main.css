@@ -1,7 +1,7 @@
 /* Base */
 /* Palette */
 body {
-  color: white;
+  color: #585858;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 16pt;
   font-weight: 300;
@@ -25,30 +25,6 @@ body {
 .login_btn input {
   padding: 6px 30px;
   font-variant: small-caps;
-}
-
-.button {
-  display: inline-block;
-  list-style: none;
-  text-decoration: none;
-  padding: 6px 24px;
-  cursor: pointer;
-}
-
-.button.primary {
-  background-color: #2196f3;
-}
-
-.button.primary a {
-  color: white;
-}
-
-.button.secondary {
-  background-color: #efefef;
-}
-
-.button.secondary a {
-  color: #efefef;
 }
 
 .login {
@@ -120,7 +96,7 @@ input {
 }
 
 #header-container #header-left p:active {
-  color: #efefef;
+  color: #cccccc;
 }
 
 #header-container #header-middle {
@@ -156,7 +132,7 @@ input {
 }
 
 #header-container #header-right p:active {
-  color: #efefef;
+  color: #cccccc;
 }
 
 #landing {
