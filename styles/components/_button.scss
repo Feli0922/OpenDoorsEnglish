@@ -19,18 +19,18 @@
     cursor: pointer;
 
     &.primary {
-        background-color: $accent2;
+        background-color: $primary;
         
         a {
-            color: white;
+            color: $text-primary;
         }
     }
 
     &.secondary {
-        background-color: $fg-alt;
+        background-color: $secondary;
 
         a {
-            color: $fg-alt;
+            color: $text-primary;
         }
     }
 }

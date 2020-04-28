@@ -4,7 +4,7 @@
     padding: 10px 30px;
     flex-direction: row;
     border-style: solid;
-    border-color: $border;
+    // border-color: $border;
     border-radius: 3px;
 
     #header-left {
@@ -19,7 +19,7 @@
             cursor: pointer;
 
             &:active {
-                color: $fg-alt;
+                color: $primary-light;
             }
         }
     }
@@ -42,7 +42,7 @@
             cursor: pointer;
 
             &:active {
-                color: $fg-alt;
+                color: $primary-light;
             }
         }
     }
