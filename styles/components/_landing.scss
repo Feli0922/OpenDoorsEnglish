@@ -1,0 +1,23 @@
+#landing {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+
+    #landing-about {
+        text-align: center;
+    }
+
+    // #landing-login-buttons {
+    //     display: flex;
+    //     flex-direction: column;
+
+    //     li {
+    //         list-style: none;
+
+    //         a {
+    //             text-decoration: none;
+    //         }
+    //     }
+    // }
+}

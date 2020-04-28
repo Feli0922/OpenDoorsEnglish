@@ -3,8 +3,11 @@
 @import "./base/typography";
 
 /* Layout */
+@import "./layout/layout";
 
 /* Components */
 @import "./components/button";
 @import "./components/login";
+@import "./components/header";
+@import "./components/landing";
 @import "./components/sidebar";

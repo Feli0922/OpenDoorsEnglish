@@ -1,0 +1,49 @@
+#header-container {
+    display: flex;
+    margin: 20px;
+    padding: 10px 30px;
+    flex-direction: row;
+    border-style: solid;
+    border-color: $border;
+    border-radius: 3px;
+
+    #header-left {
+        display: flex;
+        font-size: 0.8em;
+        flex-grow: 1;
+        flex-direction: row;
+        flex-basis: 30%;
+
+        p {
+            align-self: center;
+            cursor: pointer;
+
+            &:active {
+                color: $fg-alt;
+            }
+        }
+    }
+    
+    #header-middle {
+        flex-grow: 2;
+        text-align: center;
+        flex-basis: 30%;
+    }
+    
+    #header-right {
+        display: flex;
+        font-size: 0.8em;
+        flex-grow: 1;
+        flex-direction: row-reverse;
+        flex-basis: 30%;
+
+        p {
+            align-self: center;
+            cursor: pointer;
+
+            &:active {
+                color: $fg-alt;
+            }
+        }
+    }
+}
