@@ -9,3 +9,28 @@
     padding: 6px 30px;
     font-variant: small-caps;
 }
+
+.button {
+    display: inline-block;
+    list-style: none;
+
+    text-decoration: none;
+    padding: 6px 24px;
+    cursor: pointer;
+
+    &.primary {
+        background-color: $accent2;
+        
+        a {
+            color: white;
+        }
+    }
+
+    &.secondary {
+        background-color: $fg-alt;
+
+        a {
+            color: $fg-alt;
+        }
+    }
+}
