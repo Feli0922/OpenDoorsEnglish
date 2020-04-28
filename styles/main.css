@@ -152,24 +152,29 @@ input {
 }
 
 /* Class page styling */
+.inner {
+  margin: 0px 130px;
+}
+
 .class_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 0px 100px;
   border: #c9c9c9;
-}
-
-.name {
-  margin-left: 40px;
 }
 
 .class_sidebar {
-  border: #c9c9c9;
-  margin: 0px 20px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  width: 200%;
+  list-style-type: none;
 }
 
 .display_content {
-  border: #c9c9c9;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 60px;
 }
 /*# sourceMappingURL=main.css.map */

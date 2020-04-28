@@ -1,22 +1,26 @@
 /* Class page styling */
+.inner{
+    margin: 0px 130px;
+}
 .class_content{
     display: flex;
-    margin-left: 0px 100px;
+    // margin: 0px 120px;
     border: $border;
 }
 
-.name{
-    margin-left: 40px;
-}
+// .name{
+//     margin-left: 100px;
+// }
 
 .class_sidebar{
-    // flex-grow: 1;
-    border: $border;
-    margin: 0px 20px;
+    flex-grow: 2;
+    // border: $border;
+    width: 200%;
+    // margin-left: 100px;
+    list-style-type: none;
 }
 
 .display_content{
-    border: $border;
-    // flex-grow: 1;
-    // margin: 0px 100px;
+    flex-grow: 1;
+    margin-left: 60px;
 }
