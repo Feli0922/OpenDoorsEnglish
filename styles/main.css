@@ -54,7 +54,6 @@ input {
   padding: 5px 5px;
   border: solid;
   border-width: 1px;
-  border-color: #c9c9c9;
 }
 
 #header-container {
@@ -160,7 +159,6 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: #c9c9c9;
 }
 
 .class_sidebar {
