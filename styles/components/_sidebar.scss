@@ -1,13 +1,22 @@
 /* Class page styling */
 .class_content{
     display: flex;
-}
-
-.class_sidebar{
-    flex-grow: 1;
+    margin-left: 0px 100px;
     border: $border;
 }
 
+.name{
+    margin-left: 40px;
+}
+
+.class_sidebar{
+    // flex-grow: 1;
+    border: $border;
+    margin: 0px 20px;
+}
+
 .display_content{
-    flex-grow: 3;
+    border: $border;
+    // flex-grow: 1;
+    // margin: 0px 100px;
 }
