@@ -4,23 +4,30 @@
 }
 .class_content{
     display: flex;
-    // margin: 0px 120px;
-    // border: $border;
 }
 
-// .name{
-//     margin-left: 100px;
-// }
-
-.class_sidebar{
-    flex-grow: 2;
-    // border: $border;
+.class_sidebar {
+    // flex-grow: 2;
     width: 200%;
-    // margin-left: 100px;
     list-style-type: none;
+    margin-top: 10px;
+    li {
+        background-color: $primary-light;
+        font-size: 15px;
+        margin: 10px 0px;
+        padding: 10px 8px;
+        a:link{
+            text-decoration: none;
+            color: #4f474e;
+        }
+        a:visited{
+            color: #4f474e;
+        }
+    } 
 }
 
 .display_content{
-    flex-grow: 1;
+    // flex-grow: 1;
     margin-left: 60px;
+    margin: none;
 }
