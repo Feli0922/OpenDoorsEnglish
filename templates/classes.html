@@ -1,0 +1,27 @@
+{% extends "class_layout.html" %}
+{% block content %}
+<!-- Main -->
+<main>
+  <div id="classes-grid">
+    {% for post in posts %}
+      <div class="class-thumbnail">
+        <a href="{{post.page}}"><span>{{post.title}}</span></a>
+    </div>
+    {% endfor %}
+    <!--
+    <div class="class-thumbnail">
+      <a href="class1.html"><span>Class 1</span></a>
+    </div>
+    <div class="class-thumbnail">
+      <a href="class1.html"><span>Class 2</span></a>
+    </div>
+    <div class="class-thumbnail">
+      <a href="class1.html"><span>Class 3</span></a>
+    </div>
+    <div class="class-thumbnail">
+      <a href="class1.html"><span>Class 4</span></a>
+    </div>
+  -->
+  </div>
+</main>
+{%endblock content%}

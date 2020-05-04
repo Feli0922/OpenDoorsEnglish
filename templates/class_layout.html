@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}" />
   </head>
   <body class="is-preload">
     <!-- Wrapper -->
@@ -22,28 +22,17 @@
             <h3>Open Doors English Writing Tool</h3>
           </div>
           <div id="header-right">
-            <p>Student Name &#9660;</p>
+            {% if student_name %}
+              <p>{{student_name}} &#9660;</p>
+            {% else %}
+              <p></p>
+            {% endif %}
           </div>
         </div>
       </header>
+      
+      {% block content %}{% endblock %}
 
-      <!-- Main -->
-      <main>
-        <div id="classes-grid">
-          <div class="class-thumbnail">
-            <a href="class1.html"><span>Class 1</span></a>
-          </div>
-          <div class="class-thumbnail">
-            <a href="class1.html"><span>Class 2</span></a>
-          </div>
-          <div class="class-thumbnail">
-            <a href="class1.html"><span>Class 3</span></a>
-          </div>
-          <div class="class-thumbnail">
-            <a href="class1.html"><span>Class 4</span></a>
-          </div>
-        </div>
-      </main>
       <!-- <footer id="footer">
         <div class="inner">
           <p>
@@ -56,9 +45,9 @@
 
     <!-- Scripts -->
     <!-- <script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script> -->
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script> -->
   </body>
 </html>

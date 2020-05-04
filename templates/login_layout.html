@@ -7,10 +7,12 @@
 <html>
 
 <head>
-	<title>Login for Students</title>
+	<title>Login {% if title %}for {{title}}{% endif %}</title>
+		
+	
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="{{url_for('static',filename='main.css')}}" />
 </head>
 
 <body class="is-preload">
@@ -20,43 +22,23 @@
 		<!-- Header -->
 		<header>
 			<div id="header-container">
-				<div id="header-left">
-					<p>&larr; Back</p>
+				<div id="header-left" >
+					<p onclick="history.go(-1);">&larr; Back</p>
 				</div>
 				<div id="header-middle">
 					<h3>Open Doors English Writing Tool</h3>
 				</div>
+				<!-- Should we display student name on this login page?-->
 				<div id="header-right">
-					<p>Student Name &#9660;</p>
+					<p>
+						<!--Student Name &#9660;<-->
+					</p>
 				</div>
 			</div>
 		</header>
 
 		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-                <div class = "login">
-                    <div class="logintitle">
-                        <h1>Log In as Student</h1>
-                    </div>
-                    
-					<form id="login_form" method="post" name="studentlogin">
-						<div class = "label_input" >
-                        	<label> User Name:</label>
-							<input type="text" name="studentlogin" id="studentlogin" required/>
-						</div>
-						<div class = "label_input" >
-                        	<label> Password: </label>
-							<input type="password" name="password" id="password" required/>
-						</div>
-						<div class="login_btn">
-							<input type="button" value="Login" id="submit" onclick="validate()"/>
-						</div>
-                    </form>
-                </div>
-    
-			</div>
-		</div>
+		{% block content %}{% endblock %}
 
 		<!-- Footer -->
 		<footer id="footer">
