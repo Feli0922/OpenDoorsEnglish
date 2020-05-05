@@ -1,0 +1,56 @@
+/* Class page styling */
+.inner {
+  margin: 0px 130px;
+}
+
+.class-content {
+  display: flex;
+  background-color: $bg-light;
+  box-shadow: 0 3px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+.class-sidebar {
+  display: flex;
+  min-width: 250px;
+  flex-direction: column;
+
+  list-style-type: none;
+  // border-right-style: solid;
+  // border-right-color: $secondary;
+  // border-right-width: 1px;
+
+  li {
+    font-size: 15px;
+    // margin: 10px 0px;
+    // padding: 10px 8px;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      padding: 20px 8px;
+
+      &.active {
+        background-color: lightgray;
+      }
+    }
+
+    a:link {
+      text-decoration: none;
+      color: $secondary;
+    }
+
+    a:visited {
+      color: $secondary;
+    }
+  }
+}
+
+.display-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  // flex-grow: 1;
+  // margin-left: 60px;
+  // margin: none;
+}
