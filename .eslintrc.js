@@ -16,4 +16,4 @@ module.exports = {
     "linebreak-style": 0,
     "semi": 2,
   }
-}
+};
