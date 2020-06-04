@@ -33,7 +33,7 @@ which do the following:
 - run ESLint when you save
 - make sure tab size to 2 spaces instead of 4
 
-4. clone this repo if you haven't already, and run the following command:
+4. clone this repo if you haven't already, and run the following command inside of your cloned project directory:
 
 ```
 npm install
