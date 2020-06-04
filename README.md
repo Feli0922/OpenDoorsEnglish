@@ -2,6 +2,8 @@
 
 ## Project setup
 
+Important: you can cancel any process in the terminal with ctrl+c (same on all systems)
+
 1. Make sure you have node.js and npm installed and up to date. You can check your version in the command ine:
 
 ```
