@@ -27,6 +27,12 @@ If you don't have either installed, go to https://nodejs.org/en/ and install the
 "editor.tabSize": 2,
 ```
 
+which do the following:
+
+- run Prettier when you save
+- run ESLint when you save
+- make sure tab size to 2 spaces instead of 4
+
 4. clone this repo if you haven't already, and run the following command:
 
 ```
@@ -41,11 +47,15 @@ You're now good to go 👌
 npm run serve
 ```
 
+^Do this to run the project on your computer
+
 ### Compiles and minifies for production
 
 ```
 npm run build
 ```
+
+^This is for when we deploy
 
 ### Lints and fixes files
 
@@ -53,6 +63,8 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
+^This will lint the entire project and automatically fix any linting errors that can be fixed
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Linting and formatting rules
+
+Linting and formatting rules for this project can be found in eslintrc.js and prettierrc.js, respectively. Currently I'm enforcing double quotes, semicolons, and trailing commas.
