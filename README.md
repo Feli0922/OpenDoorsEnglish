@@ -1,5 +1,7 @@
 # Open Doors English
 
+Important: you can cancel any process in the terminal with ctrl+c (same on all systems)
+
 ## Project setup
 
 1. Make sure you have node.js and npm installed and up to date. You can check your version in the command ine:
@@ -33,7 +35,7 @@ which do the following:
 - run ESLint when you save
 - make sure tab size to 2 spaces instead of 4
 
-4. clone this repo if you haven't already, and run the following command:
+4. clone this repo if you haven't already, and run the following command inside of your cloned project directory:
 
 ```
 npm install
