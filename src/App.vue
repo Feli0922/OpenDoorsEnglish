@@ -1,8 +1,22 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark prominent="true">
+    <v-app-bar app color="#4F474E" dark prominent="true">
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-      <v-toolbar-title class="mx-auto">{{title}}</v-toolbar-title>
+      <v-toolbar-title class="flex text-center display-1">{{title}}</v-toolbar-title>
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon>mdi-account-group</v-icon>
+      </v-btn>
+
+      <template v-slot:extension>
+        <v-tabs centered>
+          <v-tab>Discussion</v-tab>
+          <v-tab>Compositions</v-tab>
+        </v-tabs>
+      </template>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -39,3 +53,9 @@ export default {
   }),
 };
 </script>
+
+<style>
+#app {
+  background-color: #f1e9e9;
+}
+</style>
