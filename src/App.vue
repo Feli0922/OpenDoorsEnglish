@@ -32,18 +32,24 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-content></v-content>
+    <v-content>
+      <router-view></router-view>
+      <Signin></Signin>/* TODO: don't do this */
+      <Class></Class>
+    </v-content>
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld";
+import Signin from "./views/Signin";
+import Class from "./views/Class";
 
 export default {
   name: "App",
 
   components: {
-    // HelloWorld,
+    Signin,
+    Class,
   },
 
   data: () => ({
