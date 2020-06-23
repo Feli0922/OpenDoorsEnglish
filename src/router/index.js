@@ -13,7 +13,7 @@ const routes = [
     component: Signin,
   },
   {
-    path: "/class", // TODO: use dynamic route matching
+    path: "/class/:id", // TODO: use dynamic route matching
     name: "Class",
     component: Class,
   },
