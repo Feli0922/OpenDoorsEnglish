@@ -1,5 +1,5 @@
 <template>
-  <div class="signInPage">
+  <div class="signInEmail">
     <v-app-bar app color="#4F474E" dark prominent="true" mb5>
       <v-toolbar-title class="flex text-center display-1">{{title}}</v-toolbar-title>
     </v-app-bar>
@@ -8,19 +8,11 @@
       <v-layout align-center justify-center>
         <v-flex>
           <v-form>
-            <v-card class="studentReg" width="50%" vertical-align>
-              <v-btn to="/signInGoogle" width="60%" ml-5 mr-5>Sign in with Google</v-btn>
-
-              <v-btn
-                to="/signInEmail"
-                btn
-                color="#FE5F5B"
-                class="white--text"
-                width="60%"
-              >Sign in with Email</v-btn>
-
-              <v-btn to="/register" btn color="#4F474E" class="white--text" width="60%">Register</v-btn>
+            <v-card class="studentReg" width="50%" justify-center>
               <div>
+                <!-- <h1>sign in dialogue goes here</h1> -->
+                <!-- <p>also include a button to register instead</p> -->
+
                 <router-link to="/class">click to go to class view</router-link>
               </div>
             </v-card>
