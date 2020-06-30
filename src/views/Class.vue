@@ -1,8 +1,8 @@
 <template>
   <div class="class">
-    <v-app-bar color="#4F474E" dark prominent="true">
+    <v-app-bar color="#4F474E" dark prominent>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-      <v-toolbar-title class="flex text-center display-1">Class {{$route.params.id}}</v-toolbar-title>
+      <v-toolbar-title class="flex text-center display-1">Class ID: {{$route.params.id}}</v-toolbar-title>
 
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
@@ -36,9 +36,17 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item v-for="c in classes" :key="c" v-on:click="goToClass(c.route)">
+        <v-list-item v-for="(c, i) in classes" :key="i" v-on:click="!c.edit ? goToClass(c.id) : ''">
           <v-list-item-content>
-            <v-list-item-title v-text="c.name"></v-list-item-title>
+            <v-text-field
+              v-if="c.edit"
+              v-model="c.name"
+              @blur="c.edit = false; $emit('update')"
+              @keyup.enter="c.edit=false; $emit('update')"
+            />
+            <div v-else>
+              <v-list-item-title v-text="c.name"></v-list-item-title>
+            </div>
           </v-list-item-content>
 
           <v-list-item-action>
@@ -50,13 +58,43 @@
               </template>
 
               <v-list>
-                <v-list-item v-for="(o, i) in classOptions" :key="i">
-                  <v-list-item-title>{{ o.title }}</v-list-item-title>
+                <v-list-item @click="c.edit = true">
+                  <v-list-item-title>Edit Class Name</v-list-item-title>
+                </v-list-item>
+                <v-list-item @click="deleteClass(i)">
+                  <v-list-item-title>Delete Class</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
           </v-list-item-action>
         </v-list-item>
+
+        <v-list-item>
+          <v-row justify="center">
+            <v-dialog v-model="dialog" max-width="600px">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn color="#4F474E" dark v-bind="attrs" v-on="on">Create new class</v-btn>
+              </template>
+              <v-card>
+                <v-card-title>
+                  <span class="headline">New Class Name</span>
+                </v-card-title>
+                <v-card-text>
+                  <v-form>
+                    <v-text-field label="Class" v-model="newClass" @keydown.enter.native.prevent></v-text-field>
+                    <v-btn
+                      color="#4F474E"
+                      text
+                      v-on:click="submit(); dialog=false; newClass='';"
+                    >Create</v-btn>
+                    <v-btn color="#4F474E" text v-on:click="dialog=false; newClass='';">Cancel</v-btn>
+                  </v-form>
+                </v-card-text>
+              </v-card>
+            </v-dialog>
+          </v-row>
+        </v-list-item>
+
         <v-list-item-group>
           <router-link to="/">
             <v-list-item>Log out</v-list-item>
@@ -85,13 +123,14 @@ export default {
   },
   data: () => ({
     drawer: false,
+    dialog: false,
+    newClass: "",
     currentUser: "Martha Pollack",
     classes: [
-      { name: "Class 1", route: "/class/1" },
-      { name: "Class 2", route: "/class/2" },
-      { name: "Class 3", route: "/class/3" },
+      { name: "Class 1", id: "ABCD", edit: false },
+      { name: "Class 2", id: "1234", edit: false },
+      { name: "Class 3", id: "WXYZ", edit: false },
     ],
-    classOptions: [{ title: "Edit Class Name" }, { title: "Delete Class" }],
     posts: [
       // this is dummy data, actual data structure will probably look different
       {
@@ -110,7 +149,27 @@ export default {
   }),
   methods: {
     goToClass(c) {
-      this.$router.push(c);
+      this.$router.push("/class/" + c);
+    },
+    deleteClass(i) {
+      this.classes.splice(i, 1);
+    },
+    submit() {
+      this.classes.push({
+        name: this.newClass,
+        id: this.makeid(4),
+        edit: false,
+      });
+    },
+    makeid(length) {
+      var result = "";
+      var chars =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      var cLength = chars.length;
+      for (var i = 0; i < length; i++) {
+        result += chars.charAt(Math.floor(Math.random() * cLength));
+      }
+      return result;
     },
   },
 };
