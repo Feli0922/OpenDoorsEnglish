@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Signin from "../views/Signin.vue";
+import SigninEmail from "../views/SigninEmail.vue";
 import Class from "../views/Class.vue";
 import Profile from "../views/Profile.vue";
 
@@ -11,6 +12,11 @@ const routes = [
     path: "/",
     name: "Signin",
     component: Signin,
+  },
+  {
+    path: "/",
+    name: "SigninEmail",
+    component: SigninEmail,
   },
   {
     path: "/class/:id", // TODO: use dynamic route matching
