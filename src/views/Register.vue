@@ -10,24 +10,22 @@
           <v-form>
             <v-card class="container col-lg-1" max-width="50%" style="text-align:center">
               <div>
-                <v-card-title style="text-align:justify-center" class="#FE5F5B--text">
-                  <!-- change color of text -->
-                  Signin With Email
-                </v-card-title>
+                <v-card-title style="text-align:justify-center">Register</v-card-title>
                 <router-link to="/">click to go back to signin page</router-link>
                 <div class="input field">
-                  <label for="email">Email:</label>
+                  <label for="yourname">Your Name:</label>
+                  <input type="text" id="yourname" placeholder="Name" />
+                </div>
+                <div class="input field">
+                  <label for="email">Your Email:</label>
                   <input type="text" id="email" placeholder="Email" />
                 </div>
                 <div class="input field">
-                  <label for="password">Password:</label>
+                  <label for="password">Create Password:</label>
                   <input type="text" id="password" placeholder="Password" />
                 </div>
                 <div>
-                  <v-btn btn color="white" class="black-text">
-                    <router-link to="/">Back</router-link>
-                  </v-btn>
-                  <v-btn btn color="white" class="black-text">Signin</v-btn>
+                  <v-btn btn color="grey" class="white--text">Register</v-btn>
                 </div>
 
                 <router-link to="/class/:id">click to go to class view</router-link>
@@ -42,7 +40,7 @@
 
 <script>
 export default {
-  name: "SigninEmail",
+  name: "Register",
 
   data: () => ({
     title: "Open Doors English",
