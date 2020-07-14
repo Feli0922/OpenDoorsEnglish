@@ -151,6 +151,7 @@
 
 <script>
 // @ is an alias to /src
+import { mapState } from "vuex";
 import Post from "@/components/Post.vue";
 import NewPost from "@/components/NewPost.vue";
 // import Composition from "@/components/Composition.vue";
@@ -164,6 +165,11 @@ export default {
     // Composition,
     // NewComposition,
   },
+  created() {
+    this.$store.dispatch("bindClasses");
+    this.$store.dispatch("bindUsers");
+  },
+  computed: { ...mapState(["classes", "users"]) },
   data: () => ({
     tabs: ["Discussion", "Compositions"],
     currentTab: "Discussion",
@@ -175,11 +181,11 @@ export default {
       name: "Johann Smith",
       isTeacher: false,
     },
-    classes: [
-      { name: "Class 1", id: "ABCD", edit: false },
-      { name: "Class 2", id: "1234", edit: false },
-      { name: "Class 3", id: "WXYZ", edit: false },
-    ],
+    // classes: [
+    //   { name: "Class 1", id: "ABCD", edit: false },
+    //   { name: "Class 2", id: "1234", edit: false },
+    //   { name: "Class 3", id: "WXYZ", edit: false },
+    // ],
     posts: [
       // this is dummy data, actual data structure will probably look different
       {
@@ -189,7 +195,7 @@ export default {
         likes: 0,
         liked: false,
         comments: [{ user: "Random Armadillo", comment: "lol" }],
-        date: "today", // TODO: figure out how dates work in javascript
+        date: "today",
       },
       {
         id: 2,
@@ -209,7 +215,7 @@ export default {
     //     content: "Hi I'm Johann and I think plates should not exist",
     //     likes: 0,
     //     liked: false,
-    //     date: "today", // TODO: figure out how dates work in javascript
+    //     date: "today",
     //   },
     //   {
     //     id: 2,
