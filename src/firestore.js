@@ -19,6 +19,7 @@ firebase.analytics();
 
 // Firestore
 export const db = firebase.firestore();
+export default db;
 
 const { TimeStamp, GeoPoint } = firebase.firestore;
 export { TimeStamp, GeoPoint };
