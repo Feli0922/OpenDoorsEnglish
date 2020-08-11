@@ -1,7 +1,7 @@
 <template>
-  <div class="signinEmail">
-    <v-app-bar app color="#4F474E" dark prominent mb5>
-      <v-toolbar-title class="flex text-center display-1">
+  <div class="register">
+    <v-app-bar app color="#4F474E" dark prominent height="160">
+      <v-toolbar-title class="flex text-center display-1 mb-10">
         {{ title }}
       </v-toolbar-title>
     </v-app-bar>
@@ -11,7 +11,7 @@
         <v-flex style="text-align:center">
           <v-form>
             <v-card
-              class="container col-lg-1"
+              class="container col-lg-1 mt-10"
               max-width="40%"
               style="text-align:center"
             >

@@ -1,9 +1,7 @@
 <template>
   <div class="signInPage">
-    <v-app-bar app color="#4F474E" dark prominent mb5>
-      <v-toolbar-title class="flex text-center display-1">
-        {{ title }}
-      </v-toolbar-title>
+    <v-app-bar app color="#4F474E" dark prominent height="160">
+      <v-toolbar-title class="flex text-center display-1 mb-10">{{ title }}</v-toolbar-title>
     </v-app-bar>
 
     <v-container>
@@ -11,20 +9,13 @@
         <v-flex style="text-align:center">
           <v-form>
             <!-- need to move card down -->
-            <v-card
-              class="container col-lg-1"
-              max-width="50%"
-              style="text-align:center"
-            >
+            <v-card class="container col-lg-1 mt-10" max-width="50%" style="text-align:center">
               <v-btn
                 class="mt-10 mb-6"
                 style="font-size:18px"
-                to="/signinGoogle"
                 width="60%"
                 height="60"
-              >
-                Sign in with Google
-              </v-btn>
+              >Sign in with Google</v-btn>
               <v-btn
                 class="mb-6"
                 style="font-size:18px"
@@ -37,9 +28,7 @@
                   class="white--text"
                   style="text-decoration:none"
                   to="/signinEmail"
-                >
-                  Sign in with Email
-                </router-link>
+                >Sign in with Email</router-link>
               </v-btn>
 
               <v-btn
@@ -54,15 +43,11 @@
                   class="white--text"
                   style="text-decoration:none"
                   to="/register"
-                >
-                  Register
-                </router-link>
+                >Register</router-link>
               </v-btn>
 
               <div>
-                <router-link to="/class/:id">
-                  click to go to class view
-                </router-link>
+                <router-link to="/class/:id">click to go to class view</router-link>
               </div>
             </v-card>
           </v-form>
