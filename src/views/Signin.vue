@@ -63,7 +63,9 @@
 
 <script>
 import firebase from "firebase";
+import db from "@/firestore.js";
 const provider = new firebase.auth.GoogleAuthProvider();
+const usersRef = db.collection("users");
 
 export default {
   name: "Signin",
@@ -77,8 +79,20 @@ export default {
         .auth()
         .signInWithPopup(provider)
         .then((result) => {
+          if (result.additionalUserInfo.isNewUser) {
+            usersRef.doc(result.user.uid).set({
+              displayName: result.user.displayName,
+              email: result.user.email,
+              enrolledClasses: [],
+              role: "student",
+            });
+          }
           console.log(result);
+          // TODO: set current user in store
           // this.$router.push("/class/:id"); // there are a bunch of errors thrown when I go to the class page, idk what that's about
+        })
+        .catch((err) => {
+          console.log(err);
         });
     },
     signout: function () {
